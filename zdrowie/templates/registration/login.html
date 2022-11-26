@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <form method="post" class="from-froup">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-success">Zaloguj</button>
+
+    </form>
+
+
+{%  endblock %}

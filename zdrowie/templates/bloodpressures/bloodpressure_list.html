@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!--    <h2>Tabela pomiarów </h2>-->
+<!--    <table>-->
+<!--        <tr>-->
+<!--            <td>Data</td>-->
+<!--            <td>Skurczowe</td>-->
+<!--            <td>Rozkurczowe</td>-->
+<!--            <td>Puls</td>-->
+<!--        </tr>-->
+<!--        {% for el in bloodpressures %}-->
+<!--        <tr>-->
+<!--            <td><a href="{% url 'bloodpressures:details' el.id %}">-->
+<!--                {{ el.record_datetime }}</a></td>-->
+<!--            <td>{{ el.systolic }}</td>-->
+<!--            <td>{{ el.diastolic }}</td>-->
+<!--            <td> {{ el.pulse }}</td>-->
+<!--        </tr>-->
+<!--        {% endfor %}-->
+<!--    </table>-->
+
+<!--    <div>-->
+<!--        <h2>Dodaj nowy pomiar</h2>-->
+<!--        <form method="post">-->
+<!--            {% csrf_token %}-->
+<!--            {{ form.as_p }}-->
+<!--            <button type="submit">Zapisz</button>-->
+<!--        </form>-->
+<!--    </div>-->
+
+ <table class="table table-stripped">
+<thead> <tr>
+     <th scope="col">Data</th>
+     <th scope="col">Skurczowe</th>
+     <th scope="col">Rozkurczowe</th>
+     <th scope="col">Tętno</th>
+   </tr>
+   {% for bp in object_list %}
+     <tr>
+       <td><a href="{% url 'bloodpressures:detail' bp.id %}">{{ bp.record_datetime }}</a></td>
+       <td>{{ bp.systolic }}</td>
+       <td>{{ bp.diastolic }}</td>
+       <td>{{ bp.pulse }}</td>
+</tr>
+   {% endfor %}
+ </thead>
+</table>
+
+</br></br>
+<button type="button" class=" btn-primary">
+  <a href="{% url 'bloodpressures:add'%}">Dodaj nowy pomiar</a>
+</button>
+
+{% endblock %}
+

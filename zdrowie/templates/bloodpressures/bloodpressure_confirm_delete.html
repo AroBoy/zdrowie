@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+<form method="post">
+  {% csrf_token %}
+<p>Czy chcesz usunąć pomiar nr  {{ object.id }} z dnia {{ object.record_datetime }}? </p>
+{{ form }}
+<button type="submit" class="btn btn-danger"> Usuń </button>
+</form>
+{% endblock %}

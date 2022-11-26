@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<h1>Podaj pomiar ciśnienia </h1>
+
+<form method="post" action="{% url 'bloodpressures:add' %}">
+  {% csrf_token%}
+  {{ form|crispy}}
+  <button type="submit" class="btn btn-primary">Dodaj</button>
+</form>
+
+
+
+
+{% endblock %}

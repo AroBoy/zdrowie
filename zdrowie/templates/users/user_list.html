@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<ol type="I">
+{% for user in user_list%}
+<li>
+   <h3>{{ user.username }} </h3>
+  <h4>{{ user.id }} </h4>
+</li>
+{% endfor %}
+</ol>
+
+{% endblock %}

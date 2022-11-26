@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!--{% include "includes/change_form.html" %}-->
+
+<!--    <form method="post">-->
+
+<!--        {% csrf_token %}-->
+<!--        {{ form.as_p }}-->
+<!--        <button type="submit"> Zmień </button>-->
+<!--    </form>-->
+
+<h1>{{ object.record_datetime }}</h1>
+ <table class="table">
+   <tr><th>Poziom</th><td>{{ object.value }}</td></tr>
+   <tr><th>Notatki</th><td>{{ object.notes }}</td></tr>
+ </table>
+
+<button>
+  <a href="{% url 'glucoses:update' object.id%}"> Chcesz zmienić ? </a>
+</button>
+
+</br>
+</br>
+<button>
+  <a href="{% url 'glucoses:delete' object.id%}"> A może chcesz całkowicie usunąć ? </a>
+</button>
+
+
+{% endblock %}

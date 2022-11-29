@@ -14,6 +14,7 @@ django-crispy-forms==1.9.2  # https://github.com/django-crispy-forms/django-cris
 django-autoslug==1.9.8  # https://github.com/justinmayer/django-autoslug/
 django-suit==0.2.25
 python-memcached == 1.59
+pymemcache == 3.4.0
 memcache==0.12.0
 gunicorn==20.0.4  # https://github.com/benoitc/gunicorn
 

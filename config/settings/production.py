@@ -23,7 +23,7 @@ DATABASES["default"]["CONN_MAX_AGE"] = env.int(  # noqa: F405
 CACHES = {
     'default': {
         'BACKEND': 'django.core.cache.backends.memcached.PyMemcacheCache',
-        'LOCATION': '127.0.0.1:11211',
+        'LOCATION': '91.192.145.47',
     }
 }
 

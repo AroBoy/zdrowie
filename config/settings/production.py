@@ -57,9 +57,9 @@ SECURE_CONTENT_TYPE_NOSNIFF = env.bool(
 )
 
 
-STATICFILES_STORAGE = (
-    "whitenoise.storage.CompressedManifestStaticFilesStorage"
-)
+# STATICFILES_STORAGE = (
+#     "whitenoise.storage.CompressedManifestStaticFilesStorage"
+# )
 
 # https://github.com/antonagestam/collectfast#upload-strategies
 COLLECTFAST_STRATEGY = (
